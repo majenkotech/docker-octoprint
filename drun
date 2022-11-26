@@ -1,0 +1,4 @@
+#!/bin/bash
+
+chown -R octoprint /home/octoprint/.octoprint
+su -c "octoprint serve --port=8080" octoprint

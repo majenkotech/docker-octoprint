@@ -1,0 +1,16 @@
+version: "3"
+
+volumes:
+  data:
+    driver: local
+
+services:
+  octoprint:
+    image: majenko/octoprint:latest
+    container_name: octoprint
+    ports:
+      - 8088:8080
+    volumes:
+      - data:/home/octoprint/.octoprint
+    devices:
+      - /dev/ttyS0:/dev/ttyUSB0

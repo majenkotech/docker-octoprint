@@ -2,7 +2,7 @@ FROM python:3.10
 
 ENV PATH=/home/octoprint/.local/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin
 
-RUN useradd -m octoprint
+RUN useradd -m octoprint -G dialout
 
 RUN su -c "pip install octoprint" octoprint
 
